@@ -33,7 +33,11 @@ The logs demonstrate:
 - Initialization of the service with the environment set to `local`  
 - Loading of the configuration, including server port, timeouts, and storage path  
 - Structured output of configuration details  
-- Examples of log messages at various levels: INFO, DEBUG, ERROR, and WARN  
+- Examples of log messages at various levels: INFO, DEBUG, ERROR, and WARN
+
+To enhance the readability of logs during development, this project uses a custom logging handler based on Go's `slog` package combined with the [`fatih/color`](https://github.com/fatih/color) library for colored output.
+
+The custom handler (`slogpretty.PrettyHandler`) outputs logs in a pretty JSON-like format with color highlighting for different log levels:
 
 <img width="843" height="800" alt="image" src="https://github.com/user-attachments/assets/297c7e0a-7feb-4c09-9534-339748957aab" />
 
